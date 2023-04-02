@@ -19,28 +19,23 @@
         <link rel="stylesheet" href="{$app_url}/assets/css/styles.css">
 
         <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     </head>
     <body>
 
         <header id="header">
             <div id="head" class="parallax" parallax-speed="1">
                 <h1 id="logo" class="text-center">
-                    <span class="title">Kalkulator rat kredytu</span>
+                    <span class="title">{$page_title|default:"Tytuł"}</span>
                 </h1>
             </div>
 
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    </div>
-
                     <div class="navbar-collapse collapse">
 
                         <ul class="nav navbar-nav">
-                            <li><a href="{$app_url}">Kalkulator</a></li>
-                            <li><a href="{$app_url}/app/security/logout.php">Wyloguj</a></li>
+                            {block name=navbar} Menu {/block}
                         </ul>
 
                     </div><!--/.nav-collapse -->			
@@ -57,18 +52,18 @@
                     <!-- Article main content -->
                     <article class="col-sm-8 maincontent">
                         <header class="page-header">
-                            <h1 class="page-title">{$page_title|default:"Tytuł"}</h1>
+                            <h1 class="page-title">{$page_title_left|default:"Tytuł strony"}</h1>
                         </header>
-                        {block name=content} Treść {/block}
+                        {block name=content_left} Treść {/block}
                     </article>
                     <!-- /Article -->
 
                     <!-- Sidebar -->
                     <aside class="col-md-4 sidebar sidebar-left">
                         <header class="page-header">
-                            <h1 class="page-title">{$page_title|default:"Tytuł"}</h1>
+                            <h1 class="page-title">{$page_title_right|default:"Tytuł strony"}</h1>
                         </header>
-                        {block name=content} Treść {/block}
+                        {block name=content_right} Treść {/block}
                     </aside>			
                     <!-- /Sidebar -->
 

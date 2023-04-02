@@ -1,0 +1,47 @@
+{extends file="../templates/main.html"}
+
+{block name=content_left}
+<form class="pure-form pure-form-aligned" action="{$app_url}/app/calc.php" method="post">
+    <!-- kwota kredytu -->
+    <div class="pure-control-group">
+        <label for="id_kredyt">Kwota kredytu</label>
+        <input id="id_kredyt" type="number" name="kredyt" step="0.01" value="{$kredyt}" /><br />
+    </div>
+    <!-- oprocentowanie -->
+    <div class="pure-control-group">
+        <label for="id_oprocentowanie">Oprocentowanie</label>
+        <input id="id_oprocentowanie" type="number" name="oprocentowanie" step="0.01" value="{$oprocentowanie}" /><br />
+    </div>
+    <!-- liczba rat -->
+    <div class="pure-control-group">
+        <label for="id_liczbaRat">Liczba rat</label>
+        <input id="id_liczbaRat" type="number" name="liczbaRat" value="{$liczbaRat}" /><br />
+    </div>
+    <div class="pure-controls">
+        <button class="pure-button" type="submit">Oblicz</button>
+    </div>
+</form>
+{/block}
+
+{block name=content_right}
+{if isset($messages)}
+    {if count($messages) > 0}
+        <ol>
+        {foreach $messages as $msg}
+        {strip}
+        <li>{$msg}</li>
+        {/strip}
+        {/foreach}
+        </ol>
+    {/if}
+{/if}
+
+{if isset($wynik)}
+    <h4>{$wynik}</h4>
+{/if}
+{/block}
+
+{block name=navbar}
+<li><a href="{$app_url}">Kalkulator</a></li>
+<li><a href="{$app_url}/app/security/logout.php">Wyloguj</a></li>
+{/block}
