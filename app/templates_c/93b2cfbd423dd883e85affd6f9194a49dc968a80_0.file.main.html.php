@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-04-02 02:38:47
+/* Smarty version 4.3.1, created on 2023-04-02 22:58:20
   from 'C:\xampp\htdocs\Zadanie_3\templates\main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6428ce97a71635_60621052',
+  'unifunc' => 'content_6429ec6c065779_60199254',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '93b2cfbd423dd883e85affd6f9194a49dc968a80' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Zadanie_3\\templates\\main.html',
-      1 => 1680395922,
+      1 => 1680469092,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6428ce97a71635_60621052 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6429ec6c065779_60199254 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -69,7 +69,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 
                         <ul class="nav navbar-nav">
                             <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13515862796428ce97a6dcb8_58920425', 'navbar');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13827017876429ec6c060fe1_28652557', 'navbar');
 ?>
 
                         </ul>
@@ -92,7 +92,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13515862796428ce97
 </h1>
                         </header>
                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19307693656428ce97a6f768_23388048', 'content_left');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17968965596429ec6c062513_51497282', 'content_left');
 ?>
 
                     </article>
@@ -105,7 +105,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19307693656428ce97
 </h1>
                         </header>
                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9858087916428ce97a709f5_90177827', 'content_right');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3330278746429ec6c064b14_88168226', 'content_right');
 ?>
 
                     </aside>			
@@ -119,45 +119,24 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9858087916428ce97a
         <footer id="footer" class="topspace">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 widget">
-                        <h3 class="widget-title">Contact</h3>
+                    <div class="col-md-6 widget">
+                        <h3 class="widget-title">O mnie</h3>
                         <div class="widget-body">
-                            <p>+234 23 9873237<br>
-                                <a href="mailto:#">some.email@somewhere.com</a><br>
-                                <br>
-                                234 Hidden Pond Road, Ashland City, TN 37015
+                            <p>
+                                Aleksandra Kopacz
                             </p>	
                         </div>
                     </div>
 
-                    <div class="col-md-3 widget">
-                        <h3 class="widget-title">Follow me</h3>
+                    <div class="col-md-6 widget">
+                        <h3 class="widget-title">Smarty</h3>
                         <div class="widget-body">
-                            <p class="follow-me-icons">
-                                <a href=""><i class="fa fa-twitter fa-2"></i></a>
-                                <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-                                <a href=""><i class="fa fa-github fa-2"></i></a>
-                                <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                            <p>
+                                Szablon stworzony w oparciu o bibliotekę Smarty
                             </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 widget">
-                        <h3 class="widget-title">Text widget</h3>
-                        <div class="widget-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 widget">
-                        <h3 class="widget-title">Form widget</h3>
-                        <div class="widget-body">
-                            <p>+234 23 9873237<br>
-                                <a href="mailto:#">some.email@somewhere.com</a><br>
-                                <br>
-                                234 Hidden Pond Road, Ashland City, TN 37015
-                            </p>	
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis, mauris id aliquet finibus, leo odio luctus risus, id consectetur lectus diam eget ligula. Pellentesque imperdiet erat ac ipsum condimentum dictum. In porttitor nisi erat, convallis pretium orci sagittis ut. Vestibulum aliquam at risus at ultricies. 
+                            </p>
                         </div>
                     </div>
 
@@ -197,12 +176,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9858087916428ce97a
 </html>
 <?php }
 /* {block 'navbar'} */
-class Block_13515862796428ce97a6dcb8_58920425 extends Smarty_Internal_Block
+class Block_13827017876429ec6c060fe1_28652557 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'navbar' => 
   array (
-    0 => 'Block_13515862796428ce97a6dcb8_58920425',
+    0 => 'Block_13827017876429ec6c060fe1_28652557',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -212,12 +191,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'navbar'} */
 /* {block 'content_left'} */
-class Block_19307693656428ce97a6f768_23388048 extends Smarty_Internal_Block
+class Block_17968965596429ec6c062513_51497282 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content_left' => 
   array (
-    0 => 'Block_19307693656428ce97a6f768_23388048',
+    0 => 'Block_17968965596429ec6c062513_51497282',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -227,12 +206,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content_left'} */
 /* {block 'content_right'} */
-class Block_9858087916428ce97a709f5_90177827 extends Smarty_Internal_Block
+class Block_3330278746429ec6c064b14_88168226 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content_right' => 
   array (
-    0 => 'Block_9858087916428ce97a709f5_90177827',
+    0 => 'Block_3330278746429ec6c064b14_88168226',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
