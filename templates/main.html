@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{$page_description|default:"Opis domyślny"}">
+
+        <title>{$page_title|default:"Tytuł"}</title>
+
+        <link rel="shortcut icon" href="{$conf->app_url}/assets/images/gt_favicon.png">
+
+        <!-- Bootstrap -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- Icon font -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="{$conf->app_url}/assets/css/styles.css">
+
+        <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <header id="header">
+            <div id="head" class="parallax" parallax-speed="1">
+                <h1 id="logo" class="text-center">
+                    <span class="title">{$page_title|default:"Tytuł"}</span>
+                </h1>
+            </div>
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-collapse collapse">
+
+                        <ul class="nav navbar-nav">
+                            {block name=navbar} Menu {/block}
+                        </ul>
+
+                    </div><!--/.nav-collapse -->			
+                </div>	
+            </nav>
+        </header>
+
+        <main id="main">
+
+            <div class="container">
+
+                <div class="row topspace">
+
+                    <!-- Article main content -->
+                    <article class="col-sm-8 maincontent">
+                        <header class="page-header">
+                            <h1 class="page-title">{$page_title_left|default:"Tytuł strony"}</h1>
+                        </header>
+                        {block name=content_left} Treść {/block}
+                    </article>
+                    <!-- /Article -->
+
+                    <!-- Sidebar -->
+                    <aside class="col-md-4 sidebar sidebar-left">
+                        <header class="page-header">
+                            <h1 class="page-title">{$page_title_right|default:"Tytuł strony"}</h1>
+                        </header>
+                        {block name=content_right} Treść {/block}
+                    </aside>			
+                    <!-- /Sidebar -->
+
+                </div>
+            </div>	<!-- /container -->
+
+        </main>
+
+        <footer id="footer" class="topspace">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 widget">
+                        <h3 class="widget-title">O mnie</h3>
+                        <div class="widget-body">
+                            <p>
+                                Aleksandra Kopacz
+                            </p>	
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 widget">
+                        <h3 class="widget-title">Smarty</h3>
+                        <div class="widget-body">
+                            <p>
+                                Szablon stworzony w oparciu o bibliotekę Smarty
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis, mauris id aliquet finibus, leo odio luctus risus, id consectetur lectus diam eget ligula. Pellentesque imperdiet erat ac ipsum condimentum dictum. In porttitor nisi erat, convallis pretium orci sagittis ut. Vestibulum aliquam at risus at ultricies. 
+                            </p>
+                        </div>
+                    </div>
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </footer>
+
+        <footer id="underfooter">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 widget">
+                        <div class="widget-body">
+                            <p class="text-right">
+                                Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a> </p>
+                        </div>
+                    </div>
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </footer>
+
+
+
+        <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="{$app_url}/assets/js/template.js"></script>
+    </body>
+</html>
