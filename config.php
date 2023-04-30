@@ -1,7 +1,5 @@
 <?php
 
-error_reporting(E_ALL ^ E_WARNING);
-
 $conf->root_path = dirname(__FILE__);
 $conf->server_name = 'localhost';
 $conf->server_url = 'http://'.$conf->server_name;
