@@ -18,7 +18,11 @@ class CalcCtrl {
     public function getParams() {
         $this->form->kredyt = getFromRequest('kredyt');
         $this->form->oprocentowanie = getFromRequest('oprocentowanie');
-        $this->form->liczbaRat = getFromRequest('liczbaRat');
+        if (inRole('admin')) {
+            $this->form->liczbaRat = getFromRequest('liczbaRat');
+        } else {
+            getMessages()->addError("Pole 'liczba rat' wypełnić może tylko administrator");
+        }
     }
 
     function validate() {
@@ -71,7 +75,6 @@ class CalcCtrl {
 
     public function generateView() {
 
-        global $user;
 
         getSmarty()->assign('page_title', 'Kalkulator rat kredytu');
         getSmarty()->assign('page_description', 'Szablonowanie oparte na bibliotece Smarty');
@@ -80,7 +83,7 @@ class CalcCtrl {
 
         getSmarty()->assign('form', $this->form);
         getSmarty()->assign('wynik', $this->wynik);
-        getSmarty()->assign('user', $user);
+        getSmarty()->assign('user', unserialize($_SESSION['user']));
 
         getSmarty()->display('CalcView.tpl');
     }

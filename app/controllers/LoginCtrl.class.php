@@ -20,7 +20,7 @@ class LoginCtrl {
 
     public function validate() {
         if (!(isset($this->form->login) && isset($this->form->pass))) {
-            getMessages()->addError('Błędne wywołanie aplikacji!');
+            return false;
         }
 
         if (!getMessages()->isError()) {
@@ -34,17 +34,13 @@ class LoginCtrl {
 
         if (!getMessages()->isError()) {
             if ($this->form->login == "admin" && $this->form->pass == "admin") {
-                if (session_status() == PHP_SESSION_NONE) {
-                    session_start();
-                }
                 $user = new User($this->form->login, 'admin');
                 $_SESSION['user'] = serialize($user);
+                addRole($user->role);
             } else if ($this->form->login == "user" && $this->form->pass == "user") {
-                if (session_status() == PHP_SESSION_NONE) {
-                    session_start();
-                }
                 $user = new User($this->form->login, 'user');
                 $_SESSION['user'] = serialize($user);
+                addRole($user->role);
             } else {
                 getMessages()->addError('Niepoprawny login lub hasło');
             }
@@ -66,9 +62,6 @@ class LoginCtrl {
 
     public function doLogout() {
 
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
         session_destroy();
 
         getMessages()->addInfo('Wylogowano');
@@ -79,12 +72,12 @@ class LoginCtrl {
     public function generateView() {
 
         getSmarty()->assign('form', $this->form);
-        
+
         getSmarty()->assign('page_title', 'Kalkulator rat kredytu');
         getSmarty()->assign('page_description', 'Szablonowanie oparte na bibliotece Smarty');
         getSmarty()->assign('page_title_left', 'Zaloguj się');
         getSmarty()->assign('page_title_right', 'Informacje');
-        
+
         getSmarty()->display('LoginView.tpl');
     }
 
