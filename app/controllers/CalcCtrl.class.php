@@ -68,6 +68,8 @@ class CalcCtrl {
             }
 
             getMessages()->addInfo('Wykonano obliczenia');
+
+            $this->action_newResut();
         }
 
         $this->generateView();
@@ -77,7 +79,16 @@ class CalcCtrl {
         getMessages()->addInfo('Wpisz dane w formularzu po lewej');
         $this->generateView();
     }
-    
+
+    public function action_newResut() {
+        getDB()->insert("results", [
+            "installment" => $this->form->liczbaRat,
+            "interest" => $this->form->oprocentowanie,
+            "amount" => $this->form->kredyt,
+            "result" => $this->wynik->wynik
+        ]);
+    }
+
     public function generateView() {
 
 

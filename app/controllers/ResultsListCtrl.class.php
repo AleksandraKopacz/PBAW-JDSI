@@ -31,7 +31,12 @@ class ResultsListCtrl {
         $where ["ORDER"] = "result";
 
         try {
-            $this->records = getDB()->select("results", ["result"], $where);
+            $this->records = getDB()->select("results", [
+                "amount",
+                "interest",
+                "installment",
+                "result",
+            ], $where);
         } catch (PDOException $e) {
             getMessages()->addError('Wystąpił błąd podczas pobierania rekordów');
             if (getConf()->debug)
